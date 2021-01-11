@@ -24,8 +24,6 @@ def apply_coupons(cart, coupons)
 return cart.flatten!
 end
 
-end
-
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
