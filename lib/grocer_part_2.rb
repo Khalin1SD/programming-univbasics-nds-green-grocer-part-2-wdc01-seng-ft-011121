@@ -19,7 +19,14 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  
+    cart.map do |cart_item|
+    if cart_item[:clearance]
+      cart_item[:price] *= 0.80
+      cart_item[:price].round(2)
+    end
+  end
+  cart
+end
 end
 
 def checkout(cart, coupons)
